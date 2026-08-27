@@ -34,7 +34,6 @@ struct Strategy final : public roq::client::Handler {
   void operator()(roq::Event<roq::FundsUpdate> const &) override;
 
  private:
-  roq::client::Dispatcher &dispatcher_;
   // demo how to use settings (flags)
   std::string_view const symbols_;
   std::chrono::nanoseconds const update_freq_;

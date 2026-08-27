@@ -14,8 +14,7 @@ namespace roq {
 namespace samples {
 namespace client {
 
-Strategy::Strategy(roq::client::Dispatcher &dispatcher, Settings const &settings)
-    : dispatcher_{dispatcher}, symbols_{settings.symbols}, update_freq_{settings.test.update_freq} {
+Strategy::Strategy(roq::client::Dispatcher &, Settings const &settings) : symbols_{settings.symbols}, update_freq_{settings.test.update_freq} {
 }
 
 void Strategy::operator()(roq::Event<roq::Timer> const &event) {
